@@ -90,6 +90,7 @@ const isVictory = (items) => {
 }
 
 const moveBot = () => {
+
     if (possibleCombinations.length) {
         let randNum = Math.floor(Math.random() * possibleCombinations.length)
         item.forEach(el => {
@@ -101,6 +102,7 @@ const moveBot = () => {
         possibleCombinations = possibleCombinations.filter(item => {
             return item[0] !== possibleCombinations[randNum][0] || item[1] !== possibleCombinations[randNum][1]
         })
+        checkIsVictory()
     }
 }
 
