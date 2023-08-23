@@ -1,8 +1,4 @@
-let arr = [
-    [null, null, null],
-    [null, null, null],
-    [null, null, null],
-]
+let arr = []
 let winner = document.querySelector('.winner')
 let game = document.querySelector('.game')
 let btnWrapper = document.querySelector('.btn-wrapper')
@@ -106,7 +102,6 @@ const moveBot = () => {
             return item[0] !== possibleCombinations[randNum][0] || item[1] !== possibleCombinations[randNum][1]
         })
     }
-    checkIsVictory()
 }
 
 const handlerChangeValue = (e) => {
